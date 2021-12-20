@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "icons";
+  src: url("icons/fonts/icomoon.eot?n3n979");
+  src: url("icons/fonts/icomoon.eot?n3n979#iefix") format("embedded-opentype"), url("icons/fonts/icomoon.ttf?n3n979") format("truetype"), url("icons/fonts/icomoon.woff?n3n979") format("woff"), url("icons/fonts/icomoon.svg?n3n979#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-checked:before {
+  content: "\e003";
+}
+
+.icon-add:before {
+  content: "\e000";
+}
+
+.icon-unchecked:before {
+  content: "\e002";
+}
+
+.icon-remove:before {
+  content: "\e001";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #c5e4e7;
+  font-family: "Space Mono", monospace;
+  font-size: 20px;
+  line-height: 20px;
+  color: white;
+}
+body .app {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .app .title {
+  text-align: center;
+  color: #00494d;
+  font-weight: 700;
+  margin: 5rem 0 3.5rem 0;
+}
+body .app .card {
+  background-color: white;
+  width: 100%;
+  border-radius: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 2.5rem;
+}
+body .app .card .input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+body .app .card .input label {
+  color: #5e7a7d;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+body .app .card .input .bill .label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+}
+body .app .card .input .bill .label .error {
+  color: #a71717;
+  font-weight: 700;
+  font-size: 1.5rem;
+  opacity: 0;
+}
+body .app .card .input .bill .label .show-error-msg {
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+body .app .card .input .input_field {
+  position: relative;
+}
+body .app .card .input .input_field img {
+  position: absolute;
+  left: 2.4rem;
+  top: 1.3rem;
+}
+body .app .card .input .input_field .input_field_text {
+  background-color: #f4fafa;
+  border: none;
+  width: 100%;
+  border-radius: 0.5rem;
+  color: #00494d;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: right;
+  padding: 0.5rem 2.4rem;
+}
+body .app .card .input .input_field .input_field_text:focus {
+  outline: none;
+  border: 2px solid #26c0ab;
+}
+body .app .card .input .tip .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1.2rem;
+}
+body .app .card .input .tip .btn .button {
+  width: 46%;
+  text-align: center;
+  background-color: #00494d;
+  color: white;
+  font-size: 2.4rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0;
+}
+body .app .card .input .tip .btn .button:hover {
+  background-color: #9fe8df;
+}
+body .app .card .input .tip .btn .button_active {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+body .app .card .input .tip .btn .input_field_text {
+  width: 46%;
+  background-color: #f4fafa;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.3rem 0;
+}
+body .app .card .input .tip .btn .input_field_text:focus {
+  outline: none;
+  border: 2px solid #26c0ab;
+}
+body .app .card .result {
+  background-color: #00494d;
+  width: 100%;
+  border-radius: 1.5rem;
+  padding: 2.2rem;
+}
+body .app .card .result .line-wrapper .line-output {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.4rem 0 2.4rem 0;
+}
+body .app .card .result .line-wrapper .line-output .title {
+  color: white;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+body .app .card .result .line-wrapper .line-output .desc {
+  color: #7f9c9f;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+body .app .card .result .line-wrapper .line-output .value {
+  color: #26c0ab;
+  font-weight: 700;
+  font-size: 3rem;
+}
+body .app .card .result .button {
+  width: 100%;
+  background-color: #26c0ab;
+  text-transform: uppercase;
+  text-align: center;
+  color: #00494d;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+  margin-top: 3.4rem;
+}
+body .app .card .result .button:hover {
+  background-color: #9fe8df;
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    width: 64%;
+    flex-direction: row;
+    border-radius: 2.5rem;
+    align-items: stretch;
+    padding: 3.4rem;
+    gap: 1.5rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 30px rgba(0, 0, 0, 0.05);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Tip Calculator App</title>
+  </head>
+  <body>
+    <div class="app">
+      <h1 class="title">splitter</h1>
+      <main class="card">
+        <section class="input">
+          <div class="bill">
+            <div class="label">
+              <label for="label_bill">Bill</label>
+            </div>
+
+            <div class="input_field">
+              <input
+                class="input_field_text"
+                type="text"
+                name="label_bill"
+                id="label_bill"
+                placeholder="0.0"
+              />
+              <img src="images/icon-dollar.svg" alt="dollar-icon" />
+            </div>
+          </div>
+
+          <div class="tip">
+            <div class="label">
+              <label for="label_tip">Select Tip %</label>
+            </div>
+            <div class="btn">
+              <div class="button">5%</div>
+              <div class="button">10%</div>
+              <div class="button button_active">15%</div>
+              <div class="button">25%</div>
+              <div class="button">50%</div>
+              <input
+                class="input_field_text"
+                type="text"
+                name="label_tip"
+                id="label_tip"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+
+          <div class="people">
+            <div class="label">
+              <label for="label_people">Number of People</label>
+              <div class="error">Can't be zero</div>
+            </div>
+
+            <div class="input_field">
+              <input
+                class="input_field_text"
+                type="text"
+                name="label_people"
+                id="label_people"
+                placeholder="1"
+              />
+              <img src="images/icon-person.svg" alt="person-icon" />
+            </div>
+          </div>
+        </section>
+        <section class="result">
+          <div class="line-wrapper">
+            <div class="line-output">
+              <div class="title-wrapper">
+                <div class="title">Tip Amount</div>
+                <div class="desc">/ person</div>
+              </div>
+              <div class="value">$4.27</div>
+            </div>
+
+            <div class="line-output">
+              <div class="title-wrapper">
+                <div class="title">Total</div>
+                <div class="desc">/ person</div>
+              </div>
+              <div class="value">$32.79</div>
+            </div>
+          </div>
+          <div class="button reset">Reset</div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
